@@ -1,0 +1,10 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker build -t dbpontes/docker-react2 -f Dockerfile.dev .
+
+script:
+  - docker run dbpontes/docker-react2 npm run test -- --coverage
