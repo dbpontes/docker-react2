@@ -1,0 +1,7 @@
+    ...
+
+    - name: Scan image
+      uses: sysdiglabs/scan-action@v3
+      with:
+        image-tag: "sysdiglabs/dummy-vuln-app:latest"
+        sysdig-secure-token: ${{ secrets.SYSDIG_INLINE_SCAN }}
