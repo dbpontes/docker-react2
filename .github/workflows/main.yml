@@ -6,7 +6,7 @@
             runs-on: ubuntu-latest
             steps:
             - name: Build the Docker Image
-              run: docker build . --file Dockerfile --tag sysdiglabs/dummy-vuln-app:latest
+              run: docker build . --tag sysdiglabs/dummy-vuln-app:latest
             - name: Scan Image
               uses: sysdiglabs/scan-action@v3
               with:
