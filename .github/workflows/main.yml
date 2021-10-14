@@ -1,10 +1,9 @@
-    ...
-
-    name: build and scan Docker image
+    name: Build and Scan
     on: [push]
+ 
     jobs:
         build:
-            run-on: ubuntu-latest
+            runs-on: ubuntu-latest
             steps:
             - name: Build the Docker Image
               run: docker build . --file Dockerfile --tag sysdiglabs/dummy-vuln-app:latest
